@@ -1,0 +1,4 @@
+﻿  zdk1.c
+C:\Users\Korisnik\Documents\strukture\Gizmo\Vježba1\Vježba1\zdk1.c(20,12): warning C4013: 'numOfStudents' undefined; assuming extern returning int
+C:\Users\Korisnik\Documents\strukture\Gizmo\Vježba1\Vježba1\zdk1.c(19,6): warning C4047: 'initializing': 'int' differs in levels of indirection from 'void *'
+  Vježba1.vcxproj -> C:\Users\Korisnik\Documents\strukture\Gizmo\Vježba1\x64\Debug\Vježba1.exe
