@@ -1,10 +1,4 @@
-
-
-
-
-
-
-
-Karlo Blašković
-Marko Polak
-Ivan Tadić
+Karlo Blašković 80
+Marko Polak 75
+Ivan Tadić 38
+Marko Marković 45
