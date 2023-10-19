@@ -27,20 +27,18 @@ int main() {
 }
 
 int numOfStudents(FILE* fp) {
-	int counter = 1;
-	char a;
+	int counter = 0;
+	char a[MAX_SIZE];
 	fp = fopen("Students.txt", "r");
-	for (a = getc(fp); a != EOF; a = getc(fp)) {
-		if (a == '\n') {
-			counter = counter + 1;
+	while(fgets(a, MAX_LINE, fp)) {
+		counter++;
 		}
-	}
 	fclose(fp);
 	return counter;
 }
  
 void loadDat(FILE* fp, student* stud, int numStud) {
-	int i;
+	int i=0;
 	fp = fopen("Students.txt", "r");
 	for (i = 0; i < numStud; i++) {
 		fscanf(fp, "%s %s %d \n", (stud + i)->name, (stud + i)->surname, &((stud + i)->points));

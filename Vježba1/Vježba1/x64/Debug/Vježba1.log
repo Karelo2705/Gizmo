@@ -2,8 +2,8 @@
 C:\Users\Karlo\Documents\strukture\Gizmo\Vježba1\Vježba1\zdk1.c(23,12): warning C4013: 'numOfStudents' undefined; assuming extern returning int
 C:\Users\Karlo\Documents\strukture\Gizmo\Vježba1\Vježba1\zdk1.c(25,22): warning C4020: 'loadDat': too many actual parameters
 C:\Users\Karlo\Documents\strukture\Gizmo\Vježba1\Vježba1\zdk1.c(22,6): warning C4047: 'initializing': 'int' differs in levels of indirection from 'void *'
-C:\Users\Karlo\Documents\strukture\Gizmo\Vježba1\Vježba1\zdk1.c(42,52): warning C4029: declared formal parameter list different from definition
-C:\Users\Karlo\Documents\strukture\Gizmo\Vježba1\Vježba1\zdk1.c(46,14): warning C4477: 'fscanf' : format string '%d' requires an argument of type 'int *', but variadic argument 3 has type 'double *'
-C:\Users\Karlo\Documents\strukture\Gizmo\Vježba1\Vježba1\zdk1.c(54,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 3 has type 'double'
-C:\Users\Karlo\Documents\strukture\Gizmo\Vježba1\Vježba1\zdk1.c(54,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 4 has type 'double'
+C:\Users\Karlo\Documents\strukture\Gizmo\Vježba1\Vježba1\zdk1.c(40,52): warning C4029: declared formal parameter list different from definition
+C:\Users\Karlo\Documents\strukture\Gizmo\Vježba1\Vježba1\zdk1.c(44,14): warning C4477: 'fscanf' : format string '%d' requires an argument of type 'int *', but variadic argument 3 has type 'double *'
+C:\Users\Karlo\Documents\strukture\Gizmo\Vježba1\Vježba1\zdk1.c(52,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 3 has type 'double'
+C:\Users\Karlo\Documents\strukture\Gizmo\Vježba1\Vježba1\zdk1.c(52,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 4 has type 'double'
   Vježba1.vcxproj -> C:\Users\Karlo\Documents\strukture\Gizmo\Vježba1\x64\Debug\Vježba1.exe
