@@ -61,16 +61,16 @@ int main() {
 			scanf("%s", surname);
 			printf("Unesite godinu rođenja:");
 			scanf("%d", &yearOfBirth);
-			addToBottom(P, name, surname, &yearOfBirth);
+			addToBottom(P, name, surname, yearOfBirth);
 			printList(P);
 
 			continue;
 
 		case 3:
-			printf("Unesite prezime");
+			printf("Unesite prezime: ");
 			scanf("%s", surname);
-			printBySurname(P, surname);
-			printList(P);
+			Position person = printBySurname(P, surname);
+			printf("%s %s %d",person->name, person->surname, person->birthYear );
 			continue;
 
 		case 4:
@@ -117,8 +117,8 @@ int printList(Position head) {
 	return  EXIT_SUCCESS;
 }
 
-int addToBottom(Position head, char* name, char* surname, char* birthYear) {
-	while (head != NULL) {
+int addToBottom(Position head, char* name, char* surname, int birthYear) {
+	while (head->next != NULL) {
 		head = head->next;
 	}
 	Position newPerson = NULL;
