@@ -19,7 +19,7 @@ typedef struct _person {
 } Person;
 
 int addToTop(Position head, char* name, char* surname, int birthYear);
-void deleteMember(Position head, char* surnameToFind);
+int deleteMember(Position head, char* surnameToFind);
 Position printBySurname(Position head, char* surnameToFind);
 
 int main() {
@@ -74,10 +74,10 @@ int main() {
 			continue;
 
 		case 4:
-			printf("Unesite prezime");
+			printf("Unesite prezime: ");
 			scanf("%s", surname);
-			deleteMember(P, surname);
-			printList(P);
+			deleteMember(&Head, surname);
+			printList(&Head);
 			continue;
 
 
@@ -127,7 +127,7 @@ int addToBottom(Position head, char* name, char* surname, int birthYear) {
 	if (!newPerson) {
 		printf("Can't allocate memory!");
 
-		return EXIT_SUCCESS;
+		return EXIT_FAILURE;
 	}
 
 
@@ -155,7 +155,7 @@ Position printBySurname(Position head, char* surnameToFind) {
 	return NULL;
 }
 
-void deleteMember(Position head, char* surnameToFind) {
+int deleteMember(Position head, char* surnameToFind) {
 	Position temp = head->next;
 	Position tempBefore = head;
 	do {
@@ -163,13 +163,14 @@ void deleteMember(Position head, char* surnameToFind) {
 		{
 			tempBefore->next = temp->next;
 			free(temp);
+			return EXIT_SUCCESS;
 		}
 		temp = temp->next;
 		tempBefore = tempBefore->next;
 
 	} while (temp != NULL);
-	printList(head);
 
+	return EXIT_SUCCESS;
 
 
 }
