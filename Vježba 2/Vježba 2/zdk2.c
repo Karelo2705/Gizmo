@@ -18,13 +18,22 @@ typedef struct _person {
 
 } Person;
 
+<<<<<<< HEAD
 int addToTop(Position head, char* name, char* surname, int birthYear);
 int deleteMember(Position head, char* surnameToFind);
 Position printBySurname(Position head, char* surnameToFind);
+=======
+int addToTop(Position head);
+int printList(Position head);
+int addToBottom(Position head);
+void deleteMember(Position head);
+Position printBySurname(Position head);
+>>>>>>> e290c25e5fccc798b9fa6737571c70e71486d3a8
 
 int main() {
 	Person Head = { .next = NULL, .name = {0}, .surname = {0},	.birthYear = 0 };
 	Position P = &Head;
+	P->next = NULL;
 
 	int finder = 10;
 
@@ -44,40 +53,31 @@ int main() {
 
 		switch (finder) {
 		case 1:
-			printf("Unesite ime:\n");
-			scanf("%s", name);
-			printf("Unesite prezime:\n");
-			scanf("%s", surname);
-			printf("Unesite godinu rođenja:");
-			scanf("%d", &yearOfBirth);
-			addToTop(P, name, surname, yearOfBirth);
+			addToTop(P);
 			printList(P);
 			continue;
 
 		case 2:
-			printf("Unesite ime:\n");
-			scanf("%s", name);
-			printf("Unesite prezime:\n");
-			scanf("%s", surname);
-			printf("Unesite godinu rođenja:");
-			scanf("%d", &yearOfBirth);
-			addToBottom(P, name, surname, yearOfBirth);
+			addToBottom(P);
 			printList(P);
 
 			continue;
 
 		case 3:
-			printf("Unesite prezime: ");
-			scanf("%s", surname);
-			Position person = printBySurname(P, surname);
+			Position person = printBySurname(P);
 			printf("%s %s %d",person->name, person->surname, person->birthYear );
 			continue;
 
 		case 4:
+<<<<<<< HEAD
 			printf("Unesite prezime: ");
 			scanf("%s", surname);
 			deleteMember(&Head, surname);
 			printList(&Head);
+=======
+			deleteMember(P, surname);
+			printList(P);
+>>>>>>> e290c25e5fccc798b9fa6737571c70e71486d3a8
 			continue;
 
 
@@ -87,16 +87,23 @@ int main() {
 
 
 
-int addToTop(Position head, char* name, char* surname, int birthYear) {
+int addToTop(Position head) {
 	Position newPerson = NULL;
 	newPerson = (Position)malloc(sizeof(Person));
-
+	char name[MAX_SIZE];
+	char surname[MAX_SIZE];
+	int birthYear;
 	if (!newPerson) {
 		printf("Can't allocate memory!");
 
 		return EXIT_SUCCESS;
 	}
-
+	printf("Unesite ime:\n");
+	scanf("%s", name);
+	printf("Unesite prezime:\n");
+	scanf("%s", surname);
+	printf("Unesite godinu rođenja:");
+	scanf("%d", &birthYear);
 
 	strcpy(newPerson->name, name);
 	strcpy(newPerson->surname, surname);
@@ -117,19 +124,27 @@ int printList(Position head) {
 	return  EXIT_SUCCESS;
 }
 
-int addToBottom(Position head, char* name, char* surname, int birthYear) {
+int addToBottom(Position head) {
 	while (head->next != NULL) {
 		head = head->next;
 	}
 	Position newPerson = NULL;
 	newPerson = (Position)malloc(sizeof(Person));
+	char name[MAX_SIZE];
+	char surname[MAX_SIZE];
+	int birthYear;
 
 	if (!newPerson) {
 		printf("Can't allocate memory!");
 
 		return EXIT_FAILURE;
 	}
-
+	printf("Unesite ime:\n");
+	scanf("%s", name);
+	printf("Unesite prezime:\n");
+	scanf("%s", surname);
+	printf("Unesite godinu rođenja:");
+	scanf("%d", &birthYear);
 
 	strcpy(newPerson->name, name);
 	strcpy(newPerson->surname, surname);
@@ -142,10 +157,15 @@ int addToBottom(Position head, char* name, char* surname, int birthYear) {
 
 }
 
-Position printBySurname(Position head, char* surnameToFind) {
+Position printBySurname(Position head) {
+	char surname[MAX_SIZE];
 	Position temp = head->next;
+
+	printf("Unesite prezime: ");
+	scanf("%s", surname);
+
 	do {
-		if (strcmp(temp->surname, surnameToFind) == 0)
+		if (strcmp(temp->surname, surname) == 0)
 		{
 			return temp;
 		}
@@ -155,6 +175,7 @@ Position printBySurname(Position head, char* surnameToFind) {
 	return NULL;
 }
 
+<<<<<<< HEAD
 int deleteMember(Position head, char* surnameToFind) {
 	Position temp = head->next;
 	Position tempBefore = head;
@@ -173,6 +194,24 @@ int deleteMember(Position head, char* surnameToFind) {
 	return EXIT_SUCCESS;
 
 
+=======
+int deleteMember(Position head) {
+	char surname[MAX_SIZE];
+	Position temp = NULL;
+
+	printf("Unesite prezime: ");
+	scanf("%s", surname);
+
+	while(head->next != NULL) {
+		if (strcmp(surname, head->next->surname) == 0) {
+			temp = head->next;
+			free(head->next);
+			head = temp;
+			return EXIT_SUCCESS;
+		}
+		head = head->next;	
+	}
+>>>>>>> e290c25e5fccc798b9fa6737571c70e71486d3a8
 }
 
 

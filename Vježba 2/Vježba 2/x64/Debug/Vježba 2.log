@@ -1,4 +1,5 @@
 ﻿  zdk2.c
+<<<<<<< HEAD
 C:\Users\Karlo\Documents\strukture\Gizmo\Vježba 2\Vježba 2\zdk2.c(51,11): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
 C:\Users\Karlo\Documents\strukture\Gizmo\Vježba 2\Vježba 2\zdk2.c(54,4): warning C4013: 'printList' undefined; assuming extern returning int
 C:\Users\Karlo\Documents\strukture\Gizmo\Vježba 2\Vježba 2\zdk2.c(62,11): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
@@ -6,4 +7,10 @@ C:\Users\Karlo\Documents\strukture\Gizmo\Vježba 2\Vježba 2\zdk2.c(64,4): warni
 C:\Users\Karlo\Documents\strukture\Gizmo\Vježba 2\Vježba 2\zdk2.c(33,6): warning C4047: 'initializing': 'int' differs in levels of indirection from 'void *'
 C:\Users\Karlo\Documents\strukture\Gizmo\Vježba 2\Vježba 2\zdk2.c(101,2): warning C4013: 'strcpy' undefined; assuming extern returning int
 C:\Users\Karlo\Documents\strukture\Gizmo\Vježba 2\Vježba 2\zdk2.c(148,7): warning C4013: 'strcmp' undefined; assuming extern returning int
+=======
+C:\Users\Karlo\Documents\strukture\Gizmo\Vježba 2\Vježba 2\zdk2.c(66,20): warning C4020: 'deleteMember': too many actual parameters
+C:\Users\Karlo\Documents\strukture\Gizmo\Vježba 2\Vježba 2\zdk2.c(36,6): warning C4047: 'initializing': 'int' differs in levels of indirection from 'void *'
+C:\Users\Karlo\Documents\strukture\Gizmo\Vježba 2\Vježba 2\zdk2.c(95,2): warning C4013: 'strcpy' undefined; assuming extern returning int
+C:\Users\Karlo\Documents\strukture\Gizmo\Vježba 2\Vježba 2\zdk2.c(155,7): warning C4013: 'strcmp' undefined; assuming extern returning int
+>>>>>>> e290c25e5fccc798b9fa6737571c70e71486d3a8
   Vježba 2.vcxproj -> C:\Users\Karlo\Documents\strukture\Gizmo\Vježba 2\x64\Debug\Vježba 2.exe
