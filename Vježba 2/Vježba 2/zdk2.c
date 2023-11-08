@@ -162,7 +162,7 @@ Position printBySurname(Position head) {
 	return NULL;
 }
 
-void deleteMember(Position head) {
+int deleteMember(Position head) {
 	char surname[MAX_SIZE];
 	Position temp = NULL;
 
@@ -174,6 +174,7 @@ void deleteMember(Position head) {
 			temp = head->next;
 			free(head->next);
 			head = temp;
+			return EXIT_SUCCESS;
 		}
 		head = head->next;	
 	}
