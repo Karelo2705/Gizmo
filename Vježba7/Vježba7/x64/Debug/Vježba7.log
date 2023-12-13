@@ -1,0 +1,8 @@
+﻿  zdk7.c
+C:\Users\Karlo\Documents\strukture\Gizmo\Vježba7\Vježba7\zdk7.c(26,9): warning C4068: unknown pragma 'funkicje'
+C:\Users\Karlo\Documents\strukture\Gizmo\Vježba7\Vježba7\zdk7.c(37,9): warning C4068: unknown pragma 'end_funkcije'
+C:\Users\Karlo\Documents\strukture\Gizmo\Vježba7\Vježba7\zdk7.c(186,16): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
+C:\Users\Karlo\Documents\strukture\Gizmo\Vježba7\Vježba7\zdk7.c(261,20): warning C4477: 'printf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'size_t'
+C:\Users\Karlo\Documents\strukture\Gizmo\Vježba7\Vježba7\zdk7.c(261,20): message : consider using '%zd' in the format string
+C:\Users\Karlo\Documents\strukture\Gizmo\Vježba7\Vježba7\zdk7.c(269): warning C4716: 'ChildPrint': must return a value
+  Vježba7.vcxproj -> C:\Users\Karlo\Documents\strukture\Gizmo\Vježba7\x64\Debug\Vježba7.exe

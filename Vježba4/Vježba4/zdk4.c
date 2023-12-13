@@ -23,7 +23,6 @@ int ClearZero(Position head);
 int InsertSorted(Position head, Position NewElement);
 int InsertAfter(Position head, Position NewElement);
 int Print(Position P);
-int CleanUp(Position P);
 int Multiply(Position P1, Position P2);
 int Sum(Position P1, Position P2);
 
@@ -49,7 +48,7 @@ int main() {
 
 
         printf("\nOdaberite broj ovisno o zeljenoj vrsti racunanja: \n");
-        printf("Ispis binoma (1)\n");
+        printf("Ispis polinoma (1)\n");
         printf("Umnozak: (2)\n");
         printf("Zbroj: (3)\n");
         printf("Izlaz (0)\n");
@@ -88,20 +87,6 @@ int main() {
         }
     }
 
-
-    return 0;
-}
-
-
-int CleanUp(Position P) {
-
-    Position temp = NULL;
-
-    while (NULL != P->next) {
-        temp = P->next;
-        P->next = temp->next;
-        free(temp);
-    }
 
     return 0;
 }
@@ -177,6 +162,7 @@ int InsertSorted(Position head, Position NewElement) {
     if (head->next != NULL && head->next->exp == NewElement->exp) {
         head->next->coef += NewElement->coef;
         n = head->coef;
+        free(NewElement);
 
         if (n == 0)
             ClearZero(head);
@@ -185,6 +171,7 @@ int InsertSorted(Position head, Position NewElement) {
     else {
         MakePol(NewElement->coef, NewElement->exp);
         InsertAfter(head, NewElement);
+
     }
 
     return 0;
@@ -224,7 +211,7 @@ int Print(Position P) {
     Position temp = P->next;
 
     while (temp) {
-        printf(" %dx^%d  \n", temp->coef, temp->exp);
+        printf(" %dx^%d\n", temp->coef, temp->exp);
         temp = temp->next;
     }
 
