@@ -18,17 +18,12 @@ typedef struct _person {
 
 } Person;
 
-<<<<<<< HEAD
-int addToTop(Position head, char* name, char* surname, int birthYear);
-int deleteMember(Position head, char* surnameToFind);
-Position printBySurname(Position head, char* surnameToFind);
-=======
 int addToTop(Position head);
 int printList(Position head);
 int addToBottom(Position head);
 void deleteMember(Position head);
 Position printBySurname(Position head);
->>>>>>> e290c25e5fccc798b9fa6737571c70e71486d3a8
+
 
 int main() {
 	Person Head = { .next = NULL, .name = {0}, .surname = {0},	.birthYear = 0 };
@@ -69,15 +64,10 @@ int main() {
 			continue;
 
 		case 4:
-<<<<<<< HEAD
 			printf("Unesite prezime: ");
 			scanf("%s", surname);
-			deleteMember(&Head, surname);
-			printList(&Head);
-=======
 			deleteMember(P, surname);
 			printList(P);
->>>>>>> e290c25e5fccc798b9fa6737571c70e71486d3a8
 			continue;
 
 
@@ -175,8 +165,7 @@ Position printBySurname(Position head) {
 	return NULL;
 }
 
-<<<<<<< HEAD
-int deleteMember(Position head, char* surnameToFind) {
+	int deleteMember(Position head, char* surnameToFind) {
 	Position temp = head->next;
 	Position tempBefore = head;
 	do {
@@ -193,25 +182,6 @@ int deleteMember(Position head, char* surnameToFind) {
 
 	return EXIT_SUCCESS;
 
-
-=======
-int deleteMember(Position head) {
-	char surname[MAX_SIZE];
-	Position temp = NULL;
-
-	printf("Unesite prezime: ");
-	scanf("%s", surname);
-
-	while(head->next != NULL) {
-		if (strcmp(surname, head->next->surname) == 0) {
-			temp = head->next;
-			free(head->next);
-			head = temp;
-			return EXIT_SUCCESS;
-		}
-		head = head->next;	
-	}
->>>>>>> e290c25e5fccc798b9fa6737571c70e71486d3a8
 }
 
 
